@@ -14,4 +14,8 @@ RUN conda install mamba -c conda-forge -y; \
     if [ -f "/tmp/conda-tmp/requirements.txt" ]; then umask 0002 && pip install -r /tmp/conda-tmp/requirements.txt; fi \
     && cat /tmp/conda-tmp/conda_init.txt >> /home/vscode/.bashrc \
     && rm -rf /tmp/conda-tmp; \
-    jupyter labextension disable "@jupyterlab/apputils-extension:announcements"
+    jupyter labextension disable "@jupyterlab/apputils-extension:announcements"; \
+    conda clean --all -y; \
+    rm -rf /opt/conda/pkgs/*; \
+    rm -rf ~/.cache/pip; \
+    rm -rf /tmp/*
