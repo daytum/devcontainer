@@ -1,2 +1,4 @@
 geostatspy
 shapely
+tensorflow==2.16.2
+protobuf==3.20.3
