@@ -1,2 +1,3 @@
 geostatspy
 shapely
+pydotplus
