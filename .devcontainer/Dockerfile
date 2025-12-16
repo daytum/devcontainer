@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/devcontainers/anaconda:3
 COPY environment.yml* requirements.txt* .devcontainer/noop.txt .devcontainer/conda_init.txt /tmp/conda-tmp/
 
 RUN apt-get update; \
-    apt-get -yq install neovim texlive; \
+    apt-get -yq install neovim texlive graphviz; \
     rm -rf /var/lib/apt/lists/*
 
 RUN conda install mamba -c conda-forge -y; \
