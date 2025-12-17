@@ -50,4 +50,4 @@ jobs:
         with:
           file: .devcontainer/Dockerfile
           push: true
-          tags: ghcr.io/${{ env.repo_name_lower }}/devcontainer:mini
+          tags: ghcr.io/${{ env.repo_name_lower }}/devcontainer:latest
